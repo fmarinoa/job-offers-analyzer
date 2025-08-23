@@ -9,7 +9,7 @@ from generate_email import EmailGenerator
 
 def main():
     fetcher = JobOffersFetcher()
-    offers, _meta = fetcher.get_all_offers(days=7)
+    offers, _meta = fetcher.get_all_offers(days=1)
 
     analyzer = GeminiAnalyzer(profile_path="src/profile.json")
     matches = analyzer.filter_offers(offers)
